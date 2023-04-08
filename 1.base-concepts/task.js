@@ -32,13 +32,13 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let percentInMonth = percent / 12;
   let bodyAmount = amount - contribution;
   let payment = bodyAmount * (percentInMonth + (percentInMonth / (((1 + percentInMonth) ** countMonths) - 1)))
-  let fullPayment = payment * countMonths + contribution;
+  let fullPayment = payment * countMonths;
   
   return +fullPayment.toFixed(2)
   
 }
 
-console.log(calculateTotalMortgage(10, 20000, 20000, 24))
+
 
 
 
